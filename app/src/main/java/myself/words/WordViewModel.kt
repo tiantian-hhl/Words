@@ -12,11 +12,24 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class WordViewModel(application: Application) : AndroidViewModel(application) {
+
+    companion object {
+        private val CET6_CORE_WORDS = setOf(
+            "abstract", "academic", "advocate", "allocate", "ambiguous", "anticipate",
+            "arbitrary", "assess", "capacity", "clarify", "coherent", "compelling",
+            "compensate", "comprehensive", "consecutive", "constitute", "criterion",
+            "demonstrate", "disseminate", "economic", "eliminate", "empirical",
+            "enhance", "evaluate", "evident", "facilitate", "feasible", "fluctuate",
+            "formidable", "hypothesis", "policy", "proliferate", "scrutinize",
+            "subordinate", "tentative", "versatile"
+        )
+    }
 
     private val prefs = application.getSharedPreferences("word_prefs", Context.MODE_PRIVATE)
     private val gson = Gson()
@@ -26,6 +39,10 @@ class WordViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _memorizedWords = MutableStateFlow<Set<String>>(emptySet())
     val memorizedWords: StateFlow<Set<String>> = _memorizedWords.asStateFlow()
+
+    val cet6Words: StateFlow<List<Word>> = _allWords.map { words ->
+        words.filter { it.word.lowercase() in CET6_CORE_WORDS }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     // 记背页面：从未记住的单词中，按JSON原顺序取前10个
     val studyWords: StateFlow<List<Word>> = combine(_allWords, _memorizedWords) { all, memorized ->

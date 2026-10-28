@@ -6716,13 +6716,8 @@
   },
   {
     "word": "march",
-    "part_of_speech": "n.",
-    "chinese_meaning": "三月"
-  },
-  {
-    "word": "march",
     "part_of_speech": "v.; n.",
-    "chinese_meaning": "（像士兵一样）齐步走, 快步行走, 游行示威, 押送; 游行, 行军, 进展, 进行曲"
+    "chinese_meaning": "三月；（像士兵一样）齐步走, 快步行走, 游行示威, 押送; 游行, 行军, 进展, 进行曲"
   },
   {
     "word": "excuse",
@@ -12578,5 +12573,75 @@
     "word": "kilometer",
     "part_of_speech": "n.",
     "chinese_meaning": "千米"
+  },
+  {
+    "word": "ambiguous",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "模棱两可的；含义不明确的"
+  },
+  {
+    "word": "arbitrary",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "任意的；武断的；专横的"
+  },
+  {
+    "word": "coherent",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "连贯的；条理清楚的；一致的"
+  },
+  {
+    "word": "compelling",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "令人信服的；引人入胜的；不可抗拒的"
+  },
+  {
+    "word": "consecutive",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "连续的；连贯的"
+  },
+  {
+    "word": "disseminate",
+    "part_of_speech": "v.",
+    "chinese_meaning": "传播；散布（信息、知识等）"
+  },
+  {
+    "word": "feasible",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "可行的；切实可行的"
+  },
+  {
+    "word": "fluctuate",
+    "part_of_speech": "v.",
+    "chinese_meaning": "波动；起伏不定"
+  },
+  {
+    "word": "formidable",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "强大的；艰巨的；令人敬畏的"
+  },
+  {
+    "word": "proliferate",
+    "part_of_speech": "v.",
+    "chinese_meaning": "激增；迅速繁殖；大量出现"
+  },
+  {
+    "word": "scrutinize",
+    "part_of_speech": "v.",
+    "chinese_meaning": "仔细检查；认真审查"
+  },
+  {
+    "word": "subordinate",
+    "part_of_speech": "adj.; n.; v.",
+    "chinese_meaning": "次要的；下级；使从属于"
+  },
+  {
+    "word": "tentative",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "暂定的；试探性的；不确定的"
+  },
+  {
+    "word": "versatile",
+    "part_of_speech": "adj.",
+    "chinese_meaning": "多才多艺的；用途广泛的；多功能的"
   }
 ]
